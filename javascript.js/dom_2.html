@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_lec_2</title>
+</head>
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <script>
+        // appenChild
+        let title = document.createElement("h1");
+        title.className = "pw skill";
+        title.textsize = "25px";
+        title.textContent = "this is mariner barkat";
+        console.log(title);
+        document.body.appendChild(title);
+        title.style.color ="red";
+        // remove child 
+        let ul = document.querySelector("ul");
+        console.log(ul);
+        let list = document.querySelectorAll("li");
+        console.log(list);
+        for(list of list){
+            ul.removeChild(list);
+        }
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <!--css-->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #c4f4f4;
+        }
+        .calculator{
+            background-color: #3a4452;
+            padding: 100px 50px;
+            border-radius: 20px;
+        }
+        .calculator form input{
+            border: 0px;
+            padding: 20px;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: -8px -8px 15px rgba(225,225,225,0.1),5px 5px 15px rgba(0,0,0,0.2);
+            background: transparent;
+            cursor: pointer;
+            color: #fff;
+        }
+        .calculator form .display{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+        form .display input{
+            text-align: right;
+            flex: 1;
+            font-size: 45px;
+            box-shadow: none;
+        }
+        form .button .equal{
+            width: 140px;
+        }
+        .button .operator{
+            color: #42f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div class="button">
+                    <input type="button" value="AC" onclick="display.value = ''" class="operator">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
+                    <input type="button" value="%"  onclick="display.value += '%'" class="operator">
+                    <input type="button" value="/"  onclick="display.value += '/'" class="operator">
+                </div>
+                <div class="button">
+                    <input type="button" value="7" onclick="display.value += '7'">
+                    <input type="button" value="8" onclick="display.value += '8'">
+                    <input type="button" value="9" onclick="display.value += '9'">
+                    <input type="button" value="*" onclick="display.value += '*'" class="operator">
+                </div>
+                <div class="button">
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="-" onclick="display.value += '-'" class="operator">
+                </div>
+                <div class="button">
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="+" onclick="display.value += '+'" class="operator">
+                </div>
+                <div class="button">
+                    <input type="button" value="0" onclick="display.value += '0'">
+                    <input type="button" value="." onclick="display.value += '.'">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

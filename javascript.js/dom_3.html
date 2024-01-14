@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_lec_3</title>
+</head>
+<body>
+    <!--normal html-->
+    <h1>hello - This is Mariner Ali</h1>
+    <p id="js"></p>
+    <button onclick="jss()" id="btn">log in</button>
+    <!--java-script-->
+    <script>
+        document.addEventListener("click", hello);
+        function hello(){
+            document.getElementById("js").innerText = "hello bacho";
+            document.getElementById("js").style.color = "aqua";
+            document.getElementById("js").style.fontSize ="30px"
+        }
+
+        function jss(){
+            document.getElementById("btn").innerText = "log out";
+            document.getElementById("btn").style.backgroundColor = "lightblue"
+            document.getElementById("btn").style.borderRadius = "5px"
+            document.getElementById("btn").style.height = "30px"
+            document.getElementById("btn").style.width = "100px"
+            document.getElementById("btn").style.borderColor = "lightblue"
+        }
+    </script>
+</body>
+</html>
